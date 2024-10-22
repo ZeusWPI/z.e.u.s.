@@ -37,6 +37,7 @@ user_specific -->
         \admin_stuff(Role),
         \nav_item(location_by_id(images), 'fas fa-image', 'Images'),
         \nav_item(location_by_id(documents), 'fas fa-file', 'Files'),
+        \nav_item(location_by_id(albums), 'fas fa-file', 'Albums'),
         \nav_item(location_by_id(logout), 'fas fa-right-from-bracket', 'Logout')
     ]).
 user_specific --> nav_item(location_by_id(login), 'fas fa-file', 'Login').

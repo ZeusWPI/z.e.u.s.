@@ -3,15 +3,15 @@
 :- use_module(library(http/http_client)).
 :- use_module(library(http/http_dispatch)).
 
-:- use_module('../templates/layout/page').
-:- use_module('../templates/view/upload_view').
-:- use_module('../util/random_atom').
-:- use_module('../../config').
+:- use_module('../../templates/layout/page').
+:- use_module('../../templates/view/cdn/upload_view').
+:- use_module('../../util/random_atom').
+:- use_module('../../../config').
 
-new(_Request) :-
+upload(get, _Request) :-
     upload_form.
 
-upload(Request) :-
+upload(post, Request) :-
     http_read_data(Request, Parts, [form_data(mime)]),
 	member(mime(Attributes, Data, []), Parts),
 	

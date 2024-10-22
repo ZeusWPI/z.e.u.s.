@@ -6,7 +6,7 @@
 
 users_view(Users) :-
     page_(
-        div([class='grid m-3'], [
+        div([class='grid'], [
             div([class='card'], [
                 div([class='card-content'], [
                     table([class='table is-fullwidth'], [

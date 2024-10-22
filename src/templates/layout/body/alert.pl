@@ -20,11 +20,11 @@ alert -->
 
 alert([]) --> html('').
 alert([alert(Level, Message) | As]) -->
-    {atom_concat('uk-alert-', Level, Class)},
+    {atom_concat('column is-full notification is-', Level, Class)},
     html([
-        div([class=Class, 'uk-alert'], [
-            a([class='uk-alert-close', 'uk-close'], []),
-            p(Message)
+        div([class=Class], [
+            button([class='delete'], []),
+            Message
         ]),
         \alert(As)
     ]).

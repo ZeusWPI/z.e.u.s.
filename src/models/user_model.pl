@@ -8,14 +8,7 @@
     add_user/3
 ]).
 
-:- use_module(library(persistency)).
-
-:- persistent user(
-    id: integer,
-    name: string,
-    role: oneof([user, admin])).
-
-:- initialization(db_attach('data/user.db', [])).
+:- use_module('database').
 
 get_user(Id, Name, Role) :-
     user(Id, Name, Role).

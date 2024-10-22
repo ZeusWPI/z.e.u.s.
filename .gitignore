@@ -1,4 +1,5 @@
 /files/*
 /data/*
+/albums/*
 !.keep
 /log

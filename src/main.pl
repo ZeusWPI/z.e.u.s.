@@ -23,6 +23,7 @@ main :-
 main(devel, Port) :-
     write("Mode: Development"), nl,
     write("Port: "), write(Port), nl,
+    debug, use_module(library(http/http_error)),
     server(Port, devel, (make, sleep(5))).
 main(prod, Port) :-
     write("Mode: Production"), nl,

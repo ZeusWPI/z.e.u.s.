@@ -1,7 +1,7 @@
 :- module('file_controller', []).
 
-:- use_module('../models/file_model').
-:- use_module('../templates/view/file_view').
+:- use_module('../../models/cdn/file_model').
+:- use_module('../../templates/view/cdn/file_view').
 
 files(_Request) :-
     findall(

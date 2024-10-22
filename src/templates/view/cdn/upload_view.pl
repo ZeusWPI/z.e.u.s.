@@ -1,14 +1,14 @@
-:- module(upload_view, [upload_form/0]).
+:- module(cdn_upload_view, [upload_form/0]).
 
 :- use_module(library(http/html_write)).
 :- use_module(library(http/http_dispatch)).
 
-:- use_module('../layout/page').
+:- use_module('../../layout/page').
 
 upload_form() :-
     page_(
-        div([class='grid m-3'], [
-            form([method='POST', action=location_by_id(upload), enctype='multipart/form-data'], [
+        div([class='grid'], [
+            form([method='POST', action=location_by_id(cdn_upload), enctype='multipart/form-data'], [
                 div([class='file has-name is-boxed'], [
                     label([class='file-label'],[
                         input([class='file-input', type=file, name=file]),
